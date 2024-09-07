@@ -1,0 +1,64 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Wireless Headphones",
+      "price": 99.99,
+      "short_description": "High-quality wireless headphones with noise cancellation."
+    },
+    {
+      "id": 2,
+      "name": "Smartwatch",
+      "price": 199.99,
+      "short_description": "Stylish smartwatch with fitness tracking and notifications."
+    },
+    {
+      "id": 3,
+      "name": "Bluetooth Speaker",
+      "price": 49.99,
+      "short_description": "Portable Bluetooth speaker with excellent sound quality."
+    },
+    {
+      "id": 4,
+      "name": "4K Ultra HD TV",
+      "price": 499.99,
+      "short_description": "50-inch 4K Ultra HD TV with smart features."
+    },
+    {
+      "id": 5,
+      "name": "Laptop Stand",
+      "price": 29.99,
+      "short_description": "Ergonomic laptop stand for improved comfort and airflow."
+    },
+    {
+      "id": 6,
+      "name": "Wireless Charger",
+      "price": 19.99,
+      "short_description": "Fast wireless charger compatible with all Qi-enabled devices."
+    },
+    {
+      "id": 7,
+      "name": "Gaming Mouse",
+      "price": 59.99,
+      "short_description": "High-precision gaming mouse with customizable buttons."
+    },
+    {
+      "id": 8,
+      "name": "External Hard Drive",
+      "price": 79.99,
+      "short_description": "1TB external hard drive for secure storage and backups."
+    },
+    {
+      "id": 9,
+      "name": "USB-C Hub",
+      "price": 29.99,
+      "short_description": "Multi-port USB-C hub for connecting various devices."
+    },
+    {
+      "id": 10,
+      "name": "Fitness Tracker",
+      "price": 69.99,
+      "short_description": "Water-resistant fitness tracker with heart rate monitoring."
+    }
+  ]
+}

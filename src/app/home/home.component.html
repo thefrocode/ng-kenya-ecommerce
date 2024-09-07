@@ -1,0 +1,31 @@
+<div class="p-4 bg-purple-800 flex justify-between">
+  <p class="text-white">E-Commerce</p>
+
+  <div class="hs-dropdown relative inline-flex">
+    <button
+      id="hs-dropdown-unstyled"
+      type="button"
+      class="hs-dropdown-toggle inline-flex justify-center items-center gap-x-2"
+      aria-expanded="false"
+      aria-label="Menu"
+    >
+      <i class="bi bi-cart text-xl text-white"></i>
+      <span
+        class="absolute top-0 right-0 transform translate-x-1/2 -translate-y-1/2 inline-flex items-center justify-center w-4 h-4 text-[10px] font-bold text-white bg-red-600 rounded-full"
+      >
+        {{ cartStore.no_of_items() }}
+      </span>
+    </button>
+
+    <div
+      class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 w-56 hidden z-10 mt-2 min-w-60 bg-white"
+      role="menu"
+      aria-labelledby="hs-dropdown-unstyled"
+    >
+      <shopping-cart-list></shopping-cart-list>
+    </div>
+  </div>
+</div>
+<div class="p-4">
+  <products-list></products-list>
+</div>

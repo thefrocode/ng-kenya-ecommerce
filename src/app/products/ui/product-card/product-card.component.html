@@ -1,0 +1,39 @@
+<div class="flex flex-col p-4 shadow-lg rounded-lg bg-white max-w-sm">
+  <!-- Product Image -->
+  <img
+    src="assets/card.jpg"
+    alt="Product Image"
+    class="rounded-t-lg w-full object-cover h-48"
+  />
+
+  <!-- Product Details -->
+  <div class="flex flex-col space-y-2 p-4">
+    <!-- Product Name -->
+    <h3 class="text-lg font-semibold text-gray-900">{{ product.name }}</h3>
+
+    <!-- Pricing Info -->
+    <div class="flex items-center space-x-2">
+      <span class="text-gray-500">Ksh {{ product.price }}</span>
+    </div>
+
+    <!-- Short Description -->
+    <p class="text-gray-700">{{ product.short_description }}</p>
+
+    <!-- Call to Action Button -->
+    @if(!product.inCart){
+    <button
+      class="mt-4 py-2 px-4 bg-purple-800 text-white rounded-lg hover:bg-blue-500 transition duration-200"
+      (click)="addToCart.emit(product)"
+    >
+      Add to Cart
+    </button>
+    }@else {
+    <button
+      class="mt-4 py-2 px-4 bg-red-800 text-white rounded-lg hover:bg-red-500 transition duration-200"
+      (click)="removeFromCart.emit(product)"
+    >
+      Remove From Cart
+    </button>
+    }
+  </div>
+</div>

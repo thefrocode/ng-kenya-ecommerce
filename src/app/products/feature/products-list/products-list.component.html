@@ -1,0 +1,35 @@
+<div class="flex flex-row justify-between">
+  <h1 class="text-2xl font-bold">Products</h1>
+  <input
+    type="text"
+    (input)="productsStore.updateFilter($event)"
+    placeholder="Search products..."
+    class="border p-2 mb-4 w-1/5 rounded-md"
+  />
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
+  @for(product of productsStore.products_list(); track product.id){
+  <product-card
+    [product]="product"
+    (addToCart)="onProductAdd($event)"
+    (removeFromCart)="onProductRemove($event)"
+  ></product-card>
+  }
+</div>
+<div class="flex justify-between items-center p-4 w-2/3 mx-auto">
+  <button
+    (click)="productsStore.updateCurrentPage('prev')"
+    class="bg-purple-800 text-white px-4 py-2 rounded disabled:opacity-50"
+  >
+    Previous
+  </button>
+
+  <span>Page {{ productsStore.options().page }} </span>
+
+  <button
+    (click)="productsStore.updateCurrentPage('next')"
+    class="bg-purple-800 text-white px-4 py-2 rounded disabled:opacity-50"
+  >
+    Next
+  </button>
+</div>
