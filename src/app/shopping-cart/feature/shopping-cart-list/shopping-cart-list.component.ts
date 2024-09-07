@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { CartStore } from '../../data-access/cart.store';
 
 @Component({
   selector: 'shopping-cart-list',
@@ -7,4 +8,6 @@ import { Component } from '@angular/core';
   templateUrl: './shopping-cart-list.component.html',
   styleUrl: './shopping-cart-list.component.css',
 })
-export class ShoppingCartListComponent {}
+export class ShoppingCartListComponent {
+  cartStore = inject(CartStore);
+}

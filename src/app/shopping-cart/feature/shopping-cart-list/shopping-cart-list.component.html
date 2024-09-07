@@ -1,1 +1,15 @@
-<p>shopping-cart-list works!</p>
+<div class="m-4">
+  @for(product of cartStore.products(); track product.id){
+  <div class="flex items-center space-x-4 p-4 border-b border-gray-200">
+    <img
+      src="assets/card.jpg"
+      alt="{{ product.name }}"
+      class="w-[40px] h-[40px] object-cover"
+    />
+    <div>
+      <p class="font-semibold">{{ product.name }}</p>
+      <p class="text-gray-500">{{ product.price }}</p>
+    </div>
+  </div>
+  }
+</div>

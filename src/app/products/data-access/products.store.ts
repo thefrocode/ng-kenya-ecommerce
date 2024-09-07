@@ -62,7 +62,6 @@ export const ProductsStore = signalStore(
         filter$.pipe(
           debounceTime(300),
           tap((filter) => {
-            console.log('filter', (filter.target as HTMLInputElement).value);
             patchState(store, {
               options: {
                 ...store.options(),
@@ -101,6 +100,7 @@ export const ProductsStore = signalStore(
   ),
   withHooks({
     onInit({ options, loadProducts }) {
+      //Options - Page, Limit, Filter
       loadProducts(options);
     },
   })
