@@ -28,14 +28,14 @@ export const CartStore = signalStore(
   })),
   withMethods((store) => ({
     addToCart(product: Product): void {
-      patchState(store, {
-        products: [...store.products(), product],
-      });
+      patchState(store, (state) => ({
+        products: [...state.products, product],
+      }));
     },
     removeFromCart(product: Product): void {
-      patchState(store, {
-        products: store.products().filter((p: Product) => p.id !== product.id),
-      });
+      patchState(store, (state) => ({
+        products: state.products.filter((p: Product) => p.id !== product.id),
+      }));
     },
   }))
 );

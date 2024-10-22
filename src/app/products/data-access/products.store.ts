@@ -9,7 +9,6 @@ import {
 } from '@ngrx/signals';
 import { pipe, tap, switchMap, filter, debounceTime } from 'rxjs';
 import { rxMethod } from '@ngrx/signals/rxjs-interop';
-import { withStorageSync } from '@angular-architects/ngrx-toolkit';
 import { tapResponse } from '@ngrx/operators';
 import { ToastrService } from 'ngx-toastr';
 import { Product, ProductsState } from '../../shared/models/product';
@@ -45,29 +44,29 @@ export const ProductsStore = signalStore(
       toastr = inject(ToastrService)
     ) => ({
       updateCurrentPage: (type: string) => {
-        let newPageNumber;
+        let newPageNumber: number;
         if (type === 'next') {
           newPageNumber = store.options().page += 1;
         } else {
           newPageNumber = store.options().page -= 1;
         }
-        patchState(store, {
+        patchState(store, (state) => ({
           options: {
-            ...store.options(),
+            ...state.options,
             page: newPageNumber,
           },
-        });
+        }));
       },
       updateFilter: rxMethod<Event>((filter$) =>
         filter$.pipe(
           debounceTime(300),
           tap((filter) => {
-            patchState(store, {
+            patchState(store, (state) => ({
               options: {
                 ...store.options(),
                 filter: (filter.target as HTMLInputElement).value,
               },
-            });
+            }));
           })
         )
       ),
