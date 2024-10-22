@@ -40,7 +40,7 @@ export const ProductsStore = signalStore(
   })),
   withMethods(
     (
-      store: any,
+      store,
       productsApi = inject(ProductsApiService),
       toastr = inject(ToastrService)
     ) => ({

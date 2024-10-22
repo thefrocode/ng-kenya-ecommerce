@@ -26,7 +26,7 @@ export const CartStore = signalStore(
       )
     ),
   })),
-  withMethods((store: any) => ({
+  withMethods((store) => ({
     addToCart(product: Product): void {
       patchState(store, {
         products: [...store.products(), product],
