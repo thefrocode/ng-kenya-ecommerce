@@ -14,20 +14,6 @@ This project showcases the usage of the **NgRx Signal Store** in an Angular appl
 
 Run the following command to install the project dependencies:
 
-````bash
-
-## Prerequisites
-
-- Node.js and npm
-- Angular CLI
-- json-server
-
-### Getting Started
-
-### 1. Install dependencies
-
-Run the following command to install the project dependencies:
-
 ```bash
 npm install
 ````
