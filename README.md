@@ -15,10 +15,6 @@ This project showcases the usage of the **NgRx Signal Store** in an Angular appl
 Run the following command to install the project dependencies:
 
 ````bash
-npm install
-# Ngrx Signal Store Demo
-
-This project showcases the usage of the **NgRx Signal Store** in an Angular application.
 
 ## Prerequisites
 
