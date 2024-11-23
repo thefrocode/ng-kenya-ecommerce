@@ -2,7 +2,7 @@
   @for(product of cartStore.products(); track product.id){
   <div class="flex items-center space-x-4 p-4 border-b border-gray-200">
     <img
-      src="assets/card.jpg"
+      src="assets/{{product.image}}"
       alt="{{ product.name }}"
       class="w-[40px] h-[40px] object-cover"
     />
